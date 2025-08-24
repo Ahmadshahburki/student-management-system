@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-graduation-cap text-2xl"></i>
+                    <h1 class="text-2xl font-bold">Student Management System</h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:text-blue-200 transition-colors">Home</a>
+                    <a href="/students" class="hover:text-blue-200 transition-colors">Students</a>
+                    <a href="/students/add" class="hover:text-blue-200 transition-colors">Add Student</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-6">
+        <div class="text-center py-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Welcome to Student Management System</h1>
+            <p class="text-xl text-gray-600 mb-8">Efficiently manage student records with our comprehensive system</p>
+            <div class="space-x-4">
+                <a href="/students" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                    View Students
+                </a>
+                <a href="/students/add" class="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+                    Add New Student
+                </a>
+            </div>
+        </div>
+        
+        <!-- Features Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+            <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover">
+                <a href="/students" class="block">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Student Management</h3>
+                    <p class="text-gray-600">Easily add, edit, and manage student records with our intuitive interface.</p>
+                </a>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover">
+                <a href="/students" class="block">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-search text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Advanced Search</h3>
+                    <p class="text-gray-600">Quickly find students by name, department, or other criteria with powerful search tools.</p>
+                </a>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover">
+                <a href="/students" class="block">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-bar text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Performance Analytics</h3>
+                    <p class="text-gray-600">Track student performance and generate insightful reports with built-in analytics.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
